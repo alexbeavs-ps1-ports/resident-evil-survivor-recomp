@@ -1,0 +1,98 @@
+{
+  "format_version": 1,
+  "id": "resident-evil-survivor-psx",
+  "name": "Resident Evil - Survivor",
+  "kind": "recomp",
+  "platform": "psx",
+  "source_repo": "resident-evil-survivor-recomp",
+  "rom_identity": {
+    "crc32": [
+      "6c39155c"
+    ],
+    "md5": [
+      "aed5be337dc9e46d9cc93ed458277fbc"
+    ],
+    "sha1": [
+      "833d8a18b6f7963755ac4e4eb12fe70a106af0cf"
+    ],
+    "disc_serials": [
+      "SLES-02732"
+    ],
+    "sizes": [
+      425693184
+    ],
+    "filenames": [
+      "Resident Evil - Survivor (Europe).cue",
+      "Resident Evil - Survivor (Europe).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "disc_fps": [
+      "9d6c28bb3a23cad944d5a56205979f2a3c7e0ba2bf9beab86fb1a4b616a2581a"
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin",
+    ".chd"
+  ],
+  "bios_identity": {
+    "required": true,
+    "name": "SCPH5552.BIN",
+    "profile": "SCPH5552",
+    "crc32": [
+      "d786f0b9"
+    ],
+    "md5": [
+      "32736f17079d0b2b7024407c39bd3050"
+    ],
+    "sha1": [
+      "f6bc2d1f5eb6593de7d089c425ac681d6fffd3f0"
+    ],
+    "sha256": [
+      "1faaa18fa820a0225e488d9f086296b8e6c46df739666093987ff7d8fd352c09"
+    ],
+    "sizes": [
+      524288
+    ],
+    "filenames": [
+      "SCPH5552.BIN"
+    ]
+  },
+  "release": {
+    "github": "alexbeavs-ps1-ports/resident-evil-survivor-recomp",
+    "allow_prerelease": false,
+    "asset_glob": {
+      "windows-x64": "resident-evil-survivor-*-windows-x64.zip",
+      "linux-x64": "resident-evil-survivor-*-linux-x64.zip",
+      "macos-arm64": "resident-evil-survivor-*-macos-arm64.zip",
+      "macos-x64": "resident-evil-survivor-*-macos-x64.zip"
+    }
+  },
+  "launch": {
+    "windows": "resident_evil_survivor.exe",
+    "linux": "resident_evil_survivor",
+    "macos": "resident_evil_survivor"
+  },
+  "build": {
+    "source": {
+      "github": "alexbeavs-ps1-ports/resident-evil-survivor-recomp",
+      "ref": ""
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "min_version": "1.0.14"
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

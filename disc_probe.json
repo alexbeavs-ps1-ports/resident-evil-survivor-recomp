@@ -1,0 +1,45 @@
+{
+  "cue_path": "disc/Resident Evil - Survivor (Europe).cue",
+  "cue_name": "Resident Evil - Survivor (Europe).cue",
+  "bin_name": "Resident Evil - Survivor (Europe).bin",
+  "track_count": 1,
+  "data_track_size": 425693184,
+  "data_track_md5": "aed5be337dc9e46d9cc93ed458277fbc",
+  "data_track_sha1": "833d8a18b6f7963755ac4e4eb12fe70a106af0cf",
+  "data_track_crc32": "6c39155c",
+  "boot_exe": "SLES_027.32",
+  "serial": "SLES-02732",
+  "serial_exe": "SLES_027.32",
+  "volume_id": "RESIDENT_EVIL_SURVIVOR",
+  "display_name": "Resident Evil - Survivor",
+  "load_address": "0x80180000",
+  "entry_pc": "0x80180BC8",
+  "text_size": "0x0000A800",
+  "stack_base": "0x801FFFF0",
+  "require_cue": true,
+  "required_disc_fp": "9d6c28bb3a23cad944d5a56205979f2a3c7e0ba2bf9beab86fb1a4b616a2581a",
+  "boot_exe_sha256": "0e49214d1b623345dc4f24da7fc0b4fc10f16dc432338bb3a36f785318721a58",
+  "boot_exe_size": 45056,
+  "boot_exe_page_crc32": [
+    "85a4beda",
+    "e07c855e",
+    "493867d8",
+    "ee28c324",
+    "36c2798f",
+    "efd15aa4",
+    "d49ea681",
+    "e4828f1d",
+    "9028058a",
+    "d726ad3b",
+    "b98b1c94"
+  ],
+  "seed_count": 99,
+  "warnings": [
+    "cue has only 1 TRACK — Track-01-only dumps fail multi-track netplay/catalog gates; prefer a full Redump cue."
+  ],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}

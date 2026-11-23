@@ -1,0 +1,13 @@
+{
+  "$schema": "https://recomp.fyi/schema/v1.json",
+  "game": "Resident Evil - Survivor",
+  "system": "PS1",
+  "type": "recomp",
+  "toolchain": "psxrecomp",
+  "status": "exploring",
+  "project": "resident-evil-survivor-recomp",
+  "original": {
+    "region": "Europe",
+    "serial": "SLES-02732"
+  }
+}

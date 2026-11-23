@@ -1,0 +1,59 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "Resident Evil - Survivor"
+id = "SLES-02732"
+players = 1
+exe = "disc/SLES_027.32"
+disc = "disc/Resident Evil - Survivor (Europe).cue"
+discs = ["disc/Resident Evil - Survivor (Europe).cue"]
+disc_serials = ["SLES-02732"]
+load_address = "0x80180000"
+entry_pc = "0x80180BC8"
+text_size = "0x0000A800"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "Resident Evil - Survivor (Europe).bin"
+cue_name = "Resident Evil - Survivor (Europe).cue"
+boot_exe = "SLES_027.32"
+known_sizes = [425693184]
+known_md5 = [
+  "aed5be337dc9e46d9cc93ed458277fbc",
+]
+known_sha1 = [
+  "833d8a18b6f7963755ac4e4eb12fe70a106af0cf",
+]
+known_crc32 = [
+  "6c39155c",
+]
+
+[recompiler]
+bios_config = "psxrecomp/bios/SCPH5552.toml"
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+openbios = false
+bios_hle = false
+window_title = "Resident Evil - Survivor Recompiled"
+memcard_dir = "saves"
+overlay_cache = true
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 1
+required_disc_fp = "9d6c28bb3a23cad944d5a56205979f2a3c7e0ba2bf9beab86fb1a4b616a2581a"
